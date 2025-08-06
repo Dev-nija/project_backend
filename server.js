@@ -18,14 +18,15 @@ app.use("/api/transactions", transactionRoutes);
 
 // Connect to MongoDB Atlas
 mongoose.connect(process.env.MONGO_URI)
+// mongoose.connect("mongodb+srv://collinsbright567:bKZeJsduKRVaFiO1@cluster0.5xexmtr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 .then(() => {
-  console.log("✅ MongoDB connected");
+  console.log(" MongoDB connected");
 
   const PORT = 5000;
-  app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+  app.listen(PORT, () => console.log(` Server running on port ${PORT}`));
 })
-.catch((err) => console.error("❌ MongoDB connection error:", err));
+.catch((err) => console.error(" MongoDB connection error:", err));
 
 
 
